@@ -32,11 +32,17 @@ public class InicioActivity extends AppCompatActivity {
 
         mUserViewModel = new ViewModelProvider(this).get(UserViewModel.class);
 
-        AtomicReference<String> nombre = new AtomicReference<>("");
-        AtomicReference<String> apellido = new AtomicReference<>("");
 
         mUserViewModel.getUser().observe(this, user -> {
-            lblCompleteName.setText(user.getNombre() + " " + user.getApellido());
+            if (user==null){
+                goLogin();
+            }else{
+                String nombre = user.getNombre();
+                String apellido = user.getApellido();
+                lblCompleteName.setText(nombre+ " " +apellido);
+            }
+
+
         });
 
     }
@@ -51,7 +57,7 @@ public class InicioActivity extends AppCompatActivity {
     }
 
     // Cierro sesión y voy a login
-    public void goLogin(View view) {
+    public void goLogin() {
       //  loggedUserData = null;
         Intent intent = new Intent(getBaseContext(), LoginActivity.class);
         startActivity(intent);
@@ -62,6 +68,12 @@ public class InicioActivity extends AppCompatActivity {
         Intent intent = new Intent(getBaseContext(), LocalActivity.class);
       //  intent.putExtra("USER", loggedUserData);
         startActivity(intent);
+    }
+
+    // Voy al activity para ver mapa
+    public void goMapa(View view) {
+        Intent intent = new Intent(getBaseContext(), MapaActivity.class);
+       startActivity(intent);
     }
 
     // Voy al activity para crear pedido
