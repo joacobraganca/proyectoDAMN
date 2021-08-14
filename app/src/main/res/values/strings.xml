@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">App</string>
+    <string name="login_lbl_login">LOGIN</string>
+    <string name="login_btn_login">Iniciar sesión</string>
+    <string name="login_txt_username">Usuario</string>
+    <string name="message_to_display">Mensajeeeeeee</string>
+    <string name="main_lbl_bienvenido">Bienvenido:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="question_article">question_article</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+    <string name="usuario">Email</string>
+    <string name="password">*******</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="registro">Registro</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="email_email_com">email@email.com</string>
+    <string name="passwordEstrella">*********</string>
+    <string name="_099099099">099099099</string>
+    <string name="documento">1.234.567-8</string>
+    <string name="registrobtn">Registro</string>
+    <string name="activo">Activo</string>
+    <string name="inactivo">Inactivo</string>
+    <string name="estado">Estado</string>
+</resources>
